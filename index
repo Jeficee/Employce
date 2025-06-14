@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Information Form</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center">EMPLOYEE INFORMATION FORM</h1>
+    <hr>
+
+    <form id="employeeForm" class="needs-validation" novalidate>
+      <h3 class="mt-4">Personal Information</h3>
+      <div class="mb-3">
+        Full Name: <input type="text" class="form-control" name="fullName" required>
+        <div class="invalid-feedback">Invalid Input</div>
+      </div>
+      <div class="mb-3">
+        Phone Number: <input type="text" class="form-control" name="phone" required>
+        <div class="invalid-feedback">Invalid Input</div>
+      </div>
+      <div class="mb-3">
+        Email: <input type="email" class="form-control" name="email" required>
+        <div class="invalid-feedback">Invalid Input</div>
+      </div>
+
+      <h3 class="mt-4">Employment Information</h3>
+      <div class="mb-3">
+        Title: <input type="text" class="form-control" name="title" required>
+        <div class="invalid-feedback">Invalid Input</div>
+      </div>
+      <div class="mb-3">
+        Department: <input type="text" class="form-control" name="department" required>
+        <div class="invalid-feedback">Invalid Input</div>
+      </div>
+      <div class="mb-3">
+        Date of Hire: <input type="date" class="form-control" name="hireDate" required>
+        <div class="invalid-feedback">Invalid Input</div>
+      </div>
+      <div class="mb-3">
+        Employment Status:<br>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" name="status" value="Full Time">
+          <label class="form-check-label">Full Time</label>
+          <div class="invalid-feedback">Invalid Input</div>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" name="status" value="Part Time">
+          <label class="form-check-label">Part Time</label>
+          <div class="invalid-feedback">Invalid Input</div>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" name="status" value="Contractor">
+          <label class="form-check-label">Contractor</label>
+          <div class="invalid-feedback">Invalid Input</div>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" name="status" value="Intern">
+          <label class="form-check-label">Intern</label>
+          <div class="invalid-feedback">Invalid Input</div>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" name="status" value="Other">
+          <label class="form-check-label">Other:</label>
+          <input type="text" class="form-control form-control-sm d-inline-block w-auto" name="otherStatus">
+          <div class="invalid-feedback">Invalid Input</div>
+        </div>
+      </div>
+
+      <h3 class="mt-4">Education</h3>
+      <div class="mb-3">
+        Highest Level of Education: <input type="text" class="form-control" name="educationLevel" required>
+        <div class="invalid-feedback">Invalid Input</div>
+      </div>
+      <div class="mb-3">
+        Name of Institution: <input type="text" class="form-control" name="institution" required>
+        <div class="invalid-feedback">Invalid Input</div>
+      </div>
+      <div class="mb-3">
+        Degree Earned: <input type="text" class="form-control" name="degree" required>
+        <div class="invalid-feedback">Invalid Input</div>
+      </div>
+      <div class="mb-3">
+        Major/Field of Study: <input type="text" class="form-control" name="major" required>
+        <div class="invalid-feedback">Invalid Input</div>
+      </div>
+      <div class="mb-3">
+        Graduation Date: <input type="date" class="form-control" name="gradDate" required>
+        <div class="invalid-feedback">Invalid Input</div>
+      </div>
+
+      <h3 class="mt-4">Professional Experience</h3>
+      <div class="mb-3">
+        Licenses: <input type="text" class="form-control" name="licenses">
+        <div class="invalid-feedback">Invalid Input</div>
+      </div>
+      <div class="mb-3">
+        Previous Work Experience:
+        <textarea class="form-control" name="experience" style="height: 150px;"></textarea>
+        <div class="invalid-feedback">Invalid Input</div>
+      </div>
+
+      <h3 class="mt-4">Emergency Contact Information</h3>
+      <div class="mb-3">
+        Full Name: <input type="text" class="form-control" name="emergencyName" required>
+        <div class="invalid-feedback">Invalid Input</div>
+      </div>
+      <div class="mb-3">
+        Address: <input type="text" class="form-control" name="emergencyAddress" required>
+        <div class="invalid-feedback">Invalid Input</div>
+      </div>
+      <div class="mb-3">
+        Phone Number: <input type="text" class="form-control" name="emergencyPhone" required>
+        <div class="invalid-feedback">Invalid Input</div>
+      </div>
+      <div class="mb-3">
+        Cell Phone Number: <input type="text" class="form-control" name="emergencyCell" required>
+        <div class="invalid-feedback">Invalid Input</div>
+      </div>
+      <div class="mb-3">
+        Relationship: <input type="text" class="form-control" name="relationship" required>
+        <div class="invalid-feedback">Invalid Input</div>
+      </div>
+
+      <h3 class="mt-4">Employee Signature</h3>
+      <div class="mb-3">
+        Signature: <input type="text" class="form-control" name="signature">
+        <div class="invalid-feedback">Invalid Input</div>
+      </div>
+      <div class="mb-3">
+        Date: <input type="text" class="form-control" name="date">
+        <div class="invalid-feedback">Invalid Input</div>
+      </div>
+
+      <input type="submit" class="btn btn-primary" value="Submit">
+      <div class="invalid-feedback">Invalid Input</div>
+    </form>
+  </div>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="form.js"></script>
+</body>
+</html>>
