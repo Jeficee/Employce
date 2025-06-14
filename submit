@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Submitted Info</title>
+  <link rel="stylesheet" href="form.css">
+</head>
+<body>
+  <h1>SUBMITTED EMPLOYEE INFORMATION</h1>
+  <hr>
+  <div id="displayData"></div>
+
+  <script>
+    const data = JSON.parse(localStorage.getItem("employeeFormData"));
+    const output = document.getElementById("displayData");
+
+    if (data) {
+      output.innerHTML = `
+        <h3>Personal Information</h3>
+        <p><strong>Name:</strong> ${data.fullName || "Invalid Input"}</p>
+        <p><strong>Address:</strong> ${data.address || "Invalid Input"}</p>
+        <p><strong>Phone:</strong> ${data.phone || "Invalid Input"}</p>
+        <p><strong>Email:</strong> ${data.email || "Invalid Input"}</p>
+
+        <h3>Employment Info</h3>
+        <p><strong>Title:</strong> ${data.title || "Invalid Input"}</p>
+        <p><strong>Department:</strong> ${data.department || "Invalid Input"}</p>
+        <p><strong>Date of Hire:</strong> ${data.hireDate || "Invalid Input"}</p>
+        <p><strong>Status:</strong> ${data.status.join(", ") || data.otherStatus || "Invalid Input"}</p>
+
+        <h3>Education</h3>
+        <p><strong>Level:</strong> ${data.educationLevel || "Invalid Input"}</p>
+        <p><strong>Institution:</strong> ${data.institution || "Invalid Input"}</p>
+        <p><strong>Degree:</strong> ${data.degree || "Invalid Input"}</p>
+        <p><strong>Major:</strong> ${data.major || "Invalid Input"}</p>
+        <p><strong>Graduation:</strong> ${data.gradDate || "Invalid Input"}</p>
+
+        <h3>Experience</h3>
+        <p><strong>Licenses:</strong> ${data.licenses || "Invalid Input"}</p>
+        <p><strong>Work Experience:</strong> ${data.experience || "Invalid Input"}</p>
+
+        <h3>Emergency Contact</h3>
+        <p><strong>Name:</strong> ${data.emergencyName || "Invalid Input"}</p>
+        <p><strong>Address:</strong> ${data.emergencyAddress || "Invalid Input"}</p>
+        <p><strong>Phone:</strong> ${data.emergencyPhone || "Invalid Input"}</p>
+        <p><strong>Cell:</strong> ${data.emergencyCell || "Invalid Input"}</p>
+        <p><strong>Relationship:</strong> ${data.relationship || "Invalid Input"}</p>
+
+        <h3>Signature</h3>
+        <p>${data.signature || "Invalid Input"} | ${data.date || "Invalid Input"}</p>
+      `;
+    } else {
+      output.innerHTML = "<p>No submitted data found.</p>";
+    }
+  </script>
+</body>
+</html>
