@@ -90,8 +90,8 @@ Student* binarySearch(Student students[], int size, int targetId) {
 }
 
 int main() {
-    Student students[MAX_SIZE] = {};
-    int currentSize = 5;
+    Student students[MAX_SIZE]; // empty array
+    int currentSize = 0;        // no initial records
     int choice;
 
     do {
@@ -104,7 +104,15 @@ int main() {
         cout << "Enter your choice: ";
         cin >> choice;
 
-        if (choice == 2 || choice == 3) {
+        if (choice == 1) {
+            addStudent(students, currentSize);
+        }
+        else if (choice == 2 || choice == 3) {
+            if (currentSize == 0) {
+                cout << "No students available. Please add students first.\n";
+                continue;
+            }
+
             int searchId;
             cout << "Enter Student ID to search: ";
             cin >> searchId;
@@ -126,13 +134,9 @@ int main() {
             else {
                 cout << "Student not found.\n";
             }
-
         }
         else if (choice == 4) {
             displayAllStudents(students, currentSize);
-        }
-        else if (choice == 1) {
-            addStudent(students, currentSize);
         }
         else if (choice == 5) {
             cout << "Exiting program.\n";
